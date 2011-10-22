@@ -5,29 +5,21 @@
 	background-clip: padding-box; 
 }
 
-.round (@radius: 5px) {
+.round(@radius: 5px) {
 	-webkit-border-radius: @radius;
 	-moz-border-radius: @radius;
 	-o-border-radius: @radius;
 	border-radius: @radius;
 }
 
-.shadow (@depth: 0 2px 4px rgba(0,0,0,.3)){
+.shadow(@depth: 0 2px 4px rgba(0,0,0,.3)){
 	-webkit-box-shadow: @depth;
 	-moz-box-shadow: @depth;
 	-o-box-shadow: @depth;
 	box-shadow: @depth;
 }
 
-.inset-shadow (@inner-depth: inset 0 0 6px rgba(0,0,0,.2)){
-	/* this mixin is probably unnecessary given @depth scope on .shadow */
-	-webkit-box-shadow: @inner-depth;
-	-moz-box-shadow: @inner-depth;
-	-o-box-shadow: @inner-depth;
-	box-shadow: @inner-depth;
-}
-
-.rotate (@deg: rotate(9deg)){	
+.rotate(@deg: rotate(9deg)){	
 	-webkit-transform: @deg;
 	-moz-transform: @deg;
 	-ms-transform: @deg;
@@ -35,7 +27,7 @@
 	transform: @deg;
 }
 
-.bgsize (@size: 100% 100%){
+.bgsize(@size: 100% 100%){
 	-webkit-background-size: @size; 
 	-moz-background-size: @size;
 	-o-background-size: @size;
@@ -52,7 +44,7 @@
 	background-image: linear-gradient(top, @start, @end);
 }
 
-.transition (@who: all, @length: .5s, @how: ease-out){
+.transition(@who: all, @length: .5s, @how: ease-out){
 	-webkit-transition: @who @length @how;
 	-moz-transition: @who @length @how;
 	-ms-transition: @who @length @how;
