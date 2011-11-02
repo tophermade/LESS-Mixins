@@ -57,7 +57,7 @@
 	background-image: linear-gradient(top, @start, @end);
 }
 
-.gradient-circle(@h: center; @v: center, @shape: circle, @size: contain, @start: #ddd, @finish: #333, @stop: 100%) {
+.gradient-circle(@h: center, @v: center, @shape: circle, @size: contain, @start: #ddd, @finish: #333, @stop: 100%) {
 	background-color: @start;
 	background-image: -moz-radial-gradient(@h @v, @shape @size, @start, @end @stop);
 	background-image: -webkit-radial-gradient(@h @v, @shape @size, @start, @end @stop);
