@@ -12,6 +12,12 @@
 	border-radius: @radius;
 }
 
+.box-sizing(@sizing: border-box){
+	-webkit-box-sizing: @sizing;
+	-moz-box-sizing: @sizing;
+	box-sizing: @sizing;
+}
+
 .scale(@scale: 1.5, @x: 0, @y: 0){
 	-webkit-transform: scale(@scale);
 	-webkit-transform-origin: @x @y;
