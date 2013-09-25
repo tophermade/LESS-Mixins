@@ -1,91 +1,91 @@
 /* misc mixins */
 
 .clip{
-	-webkit-background-clip: padding-box; 
-	-moz-background-clip: padding; 
-	-o-background-clip: padding; 
-	background-clip: padding-box; 
+    -webkit-background-clip: padding-box; 
+    -moz-background-clip: padding; 
+    -o-background-clip: padding; 
+    background-clip: padding-box; 
 }
 
 .round(@radius: 5px) {
-	-webkit-border-radius: @radius;
-	-moz-border-radius: @radius;
-	-o-border-radius: @radius;
-	border-radius: @radius;
+    -webkit-border-radius: @radius;
+    -moz-border-radius: @radius;
+    -o-border-radius: @radius;
+    border-radius: @radius;
 }
 
 .box-sizing(@sizing: border-box){
-	-webkit-box-sizing: @sizing;
-	-moz-box-sizing: @sizing;
-	box-sizing: @sizing;
+    -webkit-box-sizing: @sizing;
+    -moz-box-sizing: @sizing;
+    box-sizing: @sizing;
 }
 
 .scale(@scale: 1.5, @x: 0, @y: 0){
-	-webkit-transform: scale(@scale);
-	-webkit-transform-origin: @x @y;
-	-moz-transform: scale(@scale);
-	-moz-transform-origin: @x @y;
-	-o-transform: scale(@scale);
-	-o-transform-origin: @x @y;
-	-ms-transform: scale(@scale);
-	-ms-transform-origin: @x @y;
-	transform: scale(@scale);
-	transform-origin: @x @y;
+    -webkit-transform: scale(@scale);
+    -webkit-transform-origin: @x @y;
+    -moz-transform: scale(@scale);
+    -moz-transform-origin: @x @y;
+    -o-transform: scale(@scale);
+    -o-transform-origin: @x @y;
+    -ms-transform: scale(@scale);
+    -ms-transform-origin: @x @y;
+    transform: scale(@scale);
+    transform-origin: @x @y;
 }
 
 .shadow(@depth: 0 2px 4px rgba(0,0,0,.3)){
-	-webkit-box-shadow: @depth;
-	-moz-box-shadow: @depth;
-	-o-box-shadow: @depth;
-	box-shadow: @depth;
+    -webkit-box-shadow: @depth;
+    -moz-box-shadow: @depth;
+    -o-box-shadow: @depth;
+    box-shadow: @depth;
 }
 
-.transform(@deg: rotate(9deg)){	
-	-webkit-transform: @deg;
-	-moz-transform: @deg;
-	-ms-transform: @deg;
-	-o-transform: @deg;
-	transform: @deg;
+.transform(@deg: rotate(9deg)){ 
+    -webkit-transform: @deg;
+    -moz-transform: @deg;
+    -ms-transform: @deg;
+    -o-transform: @deg;
+    transform: @deg;
 }
 
 .perspective(@val){
-	-webkit-perspective: @val;
-	-moz-perspective: @val;
-	-opera-perspective: @val;
-	-ms-perspective: @val;
-	perspective: @val;
+    -webkit-perspective: @val;
+    -moz-perspective: @val;
+    -opera-perspective: @val;
+    -ms-perspective: @val;
+    perspective: @val;
 }
 
 .bgsize(@size: 100% 100%){
-	-webkit-background-size: @size; 
-	-moz-background-size: @size;
-	-o-background-size: @size;
-	background-size: @size;
+    -webkit-background-size: @size; 
+    -moz-background-size: @size;
+    -o-background-size: @size;
+    background-size: @size;
 }
 
-.gradient(@start: #eee, @end: #777) {	
-	background: @start;
-	background-image: -moz-linear-gradient(top, @start, @end); 
-	background-image: -ms-linear-gradient(top, @start, @end); 
-	background-image: -o-linear-gradient(top, @start, @end);
-	background-image: -webkit-gradient(linear, left top, left bottom, from(@start), to(@end));
-	background-image: -webkit-linear-gradient(top, @start, @end);
-	background-image: linear-gradient(top, @start, @end);
+.gradient(@start: #eee, @end: #777) {   
+    background: @start;
+    background-image: -moz-linear-gradient(top, @start, @end); 
+    background-image: -ms-linear-gradient(top, @start, @end); 
+    background-image: -o-linear-gradient(top, @start, @end);
+    background-image: -webkit-gradient(linear, left top, left bottom, from(@start), to(@end));
+    background-image: -webkit-linear-gradient(top, @start, @end);
+    background-image: linear-gradient(top, @start, @end);
 }
 
 .gradient-circle(@h: center, @v: center, @shape: circle, @size: contain, @start: #ddd, @finish: #333, @stop: 100%) {
-	background-color: @start;
-	background-image: -moz-radial-gradient(@h @v, @shape @size, @start, @end @stop);
-	background-image: -webkit-radial-gradient(@h @v, @shape @size, @start, @end @stop);
-	background-image: -o-radial-gradient(@h @v, @shape @size, @start, @end @stop);
-	background-image: -ms-radial-gradient(@h @v, @shape @size, @start, @end @stop);
-	background-image: radial-gradient(@h @v, @shape @size, @start, @end @stop);
+    background-color: @start;
+    background-image: -moz-radial-gradient(@h @v, @shape @size, @start, @end @stop);
+    background-image: -webkit-radial-gradient(@h @v, @shape @size, @start, @end @stop);
+    background-image: -o-radial-gradient(@h @v, @shape @size, @start, @end @stop);
+    background-image: -ms-radial-gradient(@h @v, @shape @size, @start, @end @stop);
+    background-image: radial-gradient(@h @v, @shape @size, @start, @end @stop);
 }
 
 .button-maker(@color1: #fff, @color2: #333){
-	background: @color1;
-	border-top: 1px solid lighten(@color1, 10);
-	background: -moz-linear-gradient(top,  @color1 0%, @color1 50%, @color2 51%, @color2 100%); 
+    background: @color1;
+    border-top: 1px solid lighten(@color1, 10);
+    background: -moz-linear-gradient(top,  @color1 0%, @color1 50%, @color2 51%, @color2 100%); 
     background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,@color1), color-stop(50%,@color1), color-stop(51%,@color2), color-stop(100%,@color2));
     background: -webkit-linear-gradient(top,  @color1 0%,@color1 50%,@color2 51%,@color2 100%);
     background: -o-linear-gradient(top,  @color1 0%,@color1 50%,@color2 51%,@color2 100%); 
@@ -94,50 +94,50 @@
 }
 
 .transition(@who: all, @length: .5s, @how: ease-out){
-	-webkit-transition: @who @length @how;
-	-moz-transition: @who @length @how;
-	-ms-transition: @who @length @how;
-	-o-transition: @who @length @how;
-	transition: @who @length @how;
+    -webkit-transition: @who @length @how;
+    -moz-transition: @who @length @how;
+    -ms-transition: @who @length @how;
+    -o-transition: @who @length @how;
+    transition: @who @length @how;
 }
 
 .columns(@count: 2, @width: 200px, @gap: 20px){
-	-moz-column-count: @count;
-	-moz-column-gap: @gap;
-	-webkit-column-count: @count;
-	-webkit-column-gap: @gap;
-	column-count: @count;
-	column-gap: @gap;
+    -moz-column-count: @count;
+    -moz-column-gap: @gap;
+    -webkit-column-count: @count;
+    -webkit-column-gap: @gap;
+    column-count: @count;
+    column-gap: @gap;
 }
 
 .mask(@img: none){
     -webkit-mask: url("../img/@{img}") top left / cover;
     -o-mask: url("../img/@{img}") top left / cover;
     -ms-mask: url("../img/@{img}") top left / cover;
-	mask: url("../img/@{img}") top left / cover;
+    mask: url("../img/@{img}") top left / cover;
 }
 
 .mask(@img: none, @method: top left / cover){
     -webkit-mask: url("../img/@{img}") @method;
     -o-mask: url("../img/@{img}") @method;
     -ms-mask: url("../img/@{img}") @method;
-	mask: url("../img/@{img}") @method;
+    mask: url("../img/@{img}") @method;
 }
 
 
 /* handy shortcuts */
 .true(@height: 20px){
-	height: @height;
-	line-height: @height;
+    height: @height;
+    line-height: @height;
 }
 
 .indent(@indent: -9999em){
-	text-indent: @indent;
+    text-indent: @indent;
 }
 
 .size(@width: 20px, @height:20px){
-	width: @width;
-	height: @height;
+    width: @width;
+    height: @height;
 }
 
 .bg(@img: none){
@@ -149,15 +149,15 @@
 }
 
 .clear{/* for use on :after */
-	content: " "; 
+    content: " "; 
     display: block; 
     height: 0; 
     clear: both; 
-    visibility: hidden;	
+    visibility: hidden; 
 }
 
 .magic-box{
-	&:before{
+    &:before{
         position: absolute;
         top:0;
         left:0;
@@ -167,7 +167,7 @@
     }
 }
 .magic-box(@img: none){
-	&:before{
+    &:before{
         position: absolute;
         top:0;
         left:0;
@@ -178,7 +178,7 @@
     }
 }
 .magic-box(@img: none, @method: center no-repeat){
-	&:before{
+    &:before{
         position: absolute;
         top:0;
         left:0;
