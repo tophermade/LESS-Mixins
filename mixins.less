@@ -1,3 +1,5 @@
+/* misc mixins */
+
 .clip{
 	-webkit-background-clip: padding-box; 
 	-moz-background-clip: padding; 
@@ -38,12 +40,20 @@
 	box-shadow: @depth;
 }
 
-.rotate(@deg: rotate(9deg)){	
+.transform(@deg: rotate(9deg)){	
 	-webkit-transform: @deg;
 	-moz-transform: @deg;
 	-ms-transform: @deg;
 	-o-transform: @deg;
 	transform: @deg;
+}
+
+.perspective(@val){
+	-webkit-perspective: @val;
+	-moz-perspective: @val;
+	-opera-perspective: @val;
+	-ms-perspective: @val;
+	perspective: @val;
 }
 
 .bgsize(@size: 100% 100%){
@@ -72,6 +82,17 @@
 	background-image: radial-gradient(@h @v, @shape @size, @start, @end @stop);
 }
 
+.button-maker(@color1: #fff, @color2: #333){
+	background: @color1;
+	border-top: 1px solid lighten(@color1, 10);
+	background: -moz-linear-gradient(top,  @color1 0%, @color1 50%, @color2 51%, @color2 100%); 
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,@color1), color-stop(50%,@color1), color-stop(51%,@color2), color-stop(100%,@color2));
+    background: -webkit-linear-gradient(top,  @color1 0%,@color1 50%,@color2 51%,@color2 100%);
+    background: -o-linear-gradient(top,  @color1 0%,@color1 50%,@color2 51%,@color2 100%); 
+    background: -ms-linear-gradient(top,  @color1 0%,@color1 50%,@color2 51%,@color2 100%); 
+    background: linear-gradient(to bottom,  @color1 0%,@color1 50%,@color2 51%,@color2 100%);
+}
+
 .transition(@who: all, @length: .5s, @how: ease-out){
 	-webkit-transition: @who @length @how;
 	-moz-transition: @who @length @how;
@@ -89,6 +110,19 @@
 	column-gap: @gap;
 }
 
+.mask(@img: none){
+    -webkit-mask: url("../img/@{img}") top left / cover;
+    -o-mask: url("../img/@{img}") top left / cover;
+    -ms-mask: url("../img/@{img}") top left / cover;
+	mask: url("../img/@{img}") top left / cover;
+}
+
+.mask(@img: none, @method: top left / cover){
+    -webkit-mask: url("../img/@{img}") @method;
+    -o-mask: url("../img/@{img}") @method;
+    -ms-mask: url("../img/@{img}") @method;
+	mask: url("../img/@{img}") @method;
+}
 
 
 /* handy shortcuts */
@@ -106,10 +140,51 @@
 	height: @height;
 }
 
+.bg(@img: none){
+    background: url("../img/@{img}") top center no-repeat;
+}
+
+.bg(@img: none, @method: top center no-repeat){
+    background: url("../img/@{img}") @method;
+}
+
 .clear{/* for use on :after */
 	content: " "; 
     display: block; 
     height: 0; 
     clear: both; 
     visibility: hidden;	
+}
+
+.magic-box{
+	&:before{
+        position: absolute;
+        top:0;
+        left:0;
+        right:0;
+        bottom:0;
+        content:"";
+    }
+}
+.magic-box(@img: none){
+	&:before{
+        position: absolute;
+        top:0;
+        left:0;
+        right:0;
+        bottom:0;
+        content:"";
+        background: url("../img/@{img}") center no-repeat;
+    }
+}
+.magic-box(@img: none, @method: center no-repeat){
+	&:before{
+        position: absolute;
+        top:0;
+        left:0;
+        right:0;
+        bottom:0;
+        content:"";
+        background: url("../img/@{img}") @method;
+    }
 }
