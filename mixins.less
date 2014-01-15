@@ -93,12 +93,12 @@
     background: linear-gradient(to bottom,  @color1 0%,@color1 50%,@color2 51%,@color2 100%);
 }
 
-.transition(@who: all, @length: .5s, @how: ease-out){
-    -webkit-transition: @who @length @how;
-    -moz-transition: @who @length @how;
-    -ms-transition: @who @length @how;
-    -o-transition: @who @length @how;
-    transition: @who @length @how;
+.transition(@var){
+    -webkit-transition: @var;
+    -moz-transition: @var;
+    -ms-transition: @var;
+    -o-transition: @var;
+    transition: @var;
 }
 
 .columns(@count: 2, @width: 200px, @gap: 20px){
@@ -108,6 +108,13 @@
     -webkit-column-gap: @gap;
     column-count: @count;
     column-gap: @gap;
+}
+
+.animate(@var){
+  -webkit-animation: @var;
+  -moz-animation: @var;
+  -o-animation: @var;
+  animation: @var;
 }
 
 
@@ -134,12 +141,14 @@
     background: url("../img/@{img}") @method;
 }
 
-.clear{/* for use on :after */
-    content: " "; 
-    display: block; 
-    height: 0; 
-    clear: both; 
-    visibility: hidden; 
+.clear{
+    &:after{
+        content: " "; 
+        display: block; 
+        height: 0; 
+        clear: both; 
+        visibility: hidden; 
+    }
 }
 
 .magic-box{
