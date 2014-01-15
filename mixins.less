@@ -110,20 +110,6 @@
     column-gap: @gap;
 }
 
-.mask(@img: none){
-    -webkit-mask: url("../img/@{img}") top left / cover;
-    -o-mask: url("../img/@{img}") top left / cover;
-    -ms-mask: url("../img/@{img}") top left / cover;
-    mask: url("../img/@{img}") top left / cover;
-}
-
-.mask(@img: none, @method: top left / cover){
-    -webkit-mask: url("../img/@{img}") @method;
-    -o-mask: url("../img/@{img}") @method;
-    -ms-mask: url("../img/@{img}") @method;
-    mask: url("../img/@{img}") @method;
-}
-
 
 /* handy shortcuts */
 .true(@height: 20px){
